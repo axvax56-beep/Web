@@ -35,7 +35,7 @@
         <fieldset>
             <legend>필드셋의 제목</legend>
             <label>이름: <input type="text" name="name"></label>
-            <label>이름: <input type="text" name="age"></label>
+            <label>나이: <input type="text" name="age"></label>
         </fieldset>
 
         <hr>
@@ -78,36 +78,40 @@
 
             <!-- url 입력 타입 모바일에서 키보드 모양이 다름 -->
             <input type="url">
-            <hr>
+        </form>
+
+        <hr>
 
             <!-- 비교적 최근에 새로이 추가된 input의 속성들 -->
-            <form action="">
-                <!-- 힌트 글씨 표시 -->
-                <input type="text" placeholder="이름을 입력하세요."> <br>
+        <form action="">
+            <!-- 힌트 글씨 표시 -->
+            <input type="text" placeholder="이름을 입력하세요."> <br>
 
-                <!-- 반드시 입력해야 하는 요소에 적용하는 속성 -->
-                <input type="text" required> <br>
+            <!-- 반드시 입력해야 하는 요소에 적용하는 속성 -->
+            <input type="text" required> <br>
 
-                <!-- 글씨는 보이지만 수정 불가 -->
-                <input type="text" readonly value="sam"> <br>
+            <!-- 글씨는 보이지만 수정 불가 -->
+            <input type="text" readonly value="sam"> <br>
 
-                <!-- 페이지가 로딩될때 가장 먼저 포커스를 받고 싶다면 -->
-                <input type="text" autofocus> <br>
+            <!-- 페이지가 로딩될때 가장 먼저 포커스를 받고 싶다면 -->
+            <input type="text" autofocus> <br>
 
-                <!-- 최대 입력 글자수 제한 -->
-                <input type="text" maxlength="5"><br>
+            <!-- 최대 입력 글자수 제한 -->
+            <input type="text" maxlength="5"><br>
 
-                <!-- 자동완성기능 -->
-                <input type="text" autocomplete list="datas">
-                <datalist id="datas">
-                    <option value="canada" label="캐나다"></option>
-                    <option value="china" label="중국"></option>
-                    <option value="korea" label="한국"></option>
-                </datalist>
+            <!-- 자동완성기능 -->
+            <input type="text" autocomplete list="datas">
+            <datalist id="datas">
+                <option value="canada" label="캐나다"></option>
+                <option value="china" label="중국"></option>
+                <option value="korea" label="한국"></option>
+            </datalist>
 
-                <hr>
-                <input type="submit">
-            </form>
+            <hr>
+            <input type="submit">
         </form>
     </body>
 </html>
+
+<!-- 수행과제 -->
+ <!-- chapter 4.3 ~ 5 되새김문제 -->
