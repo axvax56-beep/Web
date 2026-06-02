@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>layout test</title>
+
+        <style>
+            #wrapper{
+                width: 600px;
+                border: 1px solid black;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #header{
+                background-color: yellow;
+                width: 100%;
+                height: 50px;
+            }
+
+            #nav {
+                background-color: pink;
+                width: 30%;
+                height: 150px;
+                float: left;
+            }
+
+            #main {
+                background-color: aquamarine;
+                width: 70%;
+                height: 150px;
+                float: right;
+            }
+
+            #footer {
+                background-color: black;
+                color: white;
+                width: 100%;
+                height: 50px;
+                clear: both; /* float의 영향을 받지 않음 */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">header</div>
+            <div id="nav">nav</div>
+            <div id="main">content</div>
+            <div id="footer">footer</div>
+        </div>
+    </body>
+</html>

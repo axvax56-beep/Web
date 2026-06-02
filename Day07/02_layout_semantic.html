@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>semantic layout</title>
+
+        <style>
+            #wrapper{
+                width: 680px;
+                border: 1px solid black;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            header{
+                background-color: antiquewhite;
+                width: 100%;
+                padding: 3em;
+                box-sizing: border-box;
+            }
+
+            nav{
+                background-color: yellow;
+                width: 100%;
+                padding: 1em;
+                box-sizing: border-box;
+            }
+
+            main{
+                background-color: azure;
+                padding: 1em;
+                display: table-cell;
+                box-sizing: border-box;
+            }
+            aside{
+                background-color: beige;
+                padding: 1em;
+                display: table-cell;
+                box-sizing: border-box;
+            }
+            footer{
+                background-color: black;
+                color: white;
+                padding: 2em;
+                text-align: center;
+            }
+
+            nav ul {list-style: none;}
+            nav ul li {display: inline-block;}
+            nav ul li a{text-decoration: none; color: blue;}
+            nav ul li a:hover{text-decoration: underline;color: blueviolet;}
+
+            aside img{
+                width: 150px
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <header>
+                <h1>나만의 홈페이지</h1>
+                <p>this is semantic tag test page.</p>
+            </header>
+            
+            <nav>
+                <ul>
+                    <li><a href="">뉴스</a></li>
+                    <li><a href="">스포츠</a></li>
+                    <li><a href="">연애</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <section>
+                    <article>
+                        <h3>html5</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis dolore nemo omnis praesentium aperiam aspernatur unde quo culpa atque! Delectus optio nisi reprehenderit aliquid perspiciatis! A illo ut aperiam odio!</p>
+
+                    </article>
+                    <article>
+                        <h3>css3</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, quidem. Debitis commodi vel sed rem incidunt ratione minus, quae illo laboriosam dolores sunt reiciendis, cum, totam molestias magnam perspiciatis odit.</p>
+                    </article>
+                </section>
+            </main>
+            
+            <aside>
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <figure>
+                    <img src="../Day06/image/lion.png" alt="lion">
+                    <figcaption>사자 이미지</figcaption> /* 그림에 대한 설명 */
+                </figure>
+            </aside>
+
+            <footer>
+                <h5>copyright &copy; MBCA</h5>
+            </footer>
+
+        </div>
+    </body>
+</html>
