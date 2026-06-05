@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플랙스 컨테이너의 주축 방향 지정하기</title>
+
+    <style>
+        .container{
+            width: 700px;
+            display: flex;
+            background-color: #eee;
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+        .container>div{
+            width: 150px;
+            background-color: aqua;
+            padding: 20px;
+            margin: 2px;
+        }
+
+        #opt1{ flex-direction: row;}
+        #opt2{ flex-direction: row-reverse;}
+        #opt3{ flex-direction: column;}
+        #opt4{ flex-direction: column-reverse;}
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="container" id="opt2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="container" id="opt3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="container" id="opt4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

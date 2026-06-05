@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 항목의 줄 바꾸기</title>
+    <style>
+        .container{
+            width: 700px;
+            display: flex;
+            background-color: #eee;
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+        .container>div{
+            width: 200px;
+            background-color: aqua;
+            padding: 20px;
+            margin: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="container" id="opt2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="container" id="opt3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <style>
+        #opt1{flex-wrap: nowrap;}
+        #opt2{flex-wrap: wrap;}
+        #opt3{flex-wrap: wrap-reverse;}
+        #opt1{flex-flow: row wrap;}
+    </style>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media all and (min-width: 768px) and (max-width: 768px){
+            .image{
+            
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        @media all and (min-width: 1024px){}
+
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        #img1{
+            flex-basis: 200px;
+        }
+        #img2{
+            flex-basis: 200px;
+        }
+        #img3{
+            flex-basis: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <div id="img1">
+            <img src="./image/dog.png" alt="강아지">
+        </div>
+        <div id="img2">
+            <img src="./image/pome.png" alt="강아지2">
+        </div>
+        <div id="img3">
+            <img src="./image/poodle.png" alt="강아지3">
+        </div>
+    </div>
+</body>
+</html>

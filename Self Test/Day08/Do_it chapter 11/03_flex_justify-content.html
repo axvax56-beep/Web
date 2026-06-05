@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주축에서 플렉스 항목 배치하기</title>
+
+    <style>
+        .container{
+            width: 700px;
+            display: flex;
+            background-color: #eee;
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+        .container>div{
+            width: 100px;
+            background-color: aqua;
+            padding: 20px;
+            margin: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container" id="opt2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container" id="opt3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container" id="opt4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container" id="opt5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container" id="opt6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <style>
+        #opt1{justify-content: flex-start;} /* 주축 시작점 기준으로 정렬 */
+        #opt2{justify-content: flex-end;} /* 주축 끝점 기준으로 정렬 */
+        #opt3{justify-content: center;} /* 주축 중앙 기준으로 정렬 */
+        #opt4{justify-content: space-between;} /* 시작점과 끝점 정렬 후 중간 항목은 같은 간격으로 정렬 */
+        #opt5{justify-content: space-around;} /* 전체 항목을 같은 간격으로 정렬 */
+        #opt6{justify-content: space-evenly;} /* 전체 항목을 같은 간격으로 정렬 */
+    </style>
+</body>
+</html>
