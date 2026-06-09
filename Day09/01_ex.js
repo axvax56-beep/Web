@@ -45,4 +45,4 @@ function aaa(){
     alert('click button!') //경고창을 보여주는 JS의 내장함수
 }
 // 함수는 호출해야만 그 안에 있는 코드가 실행됨
-aaa()
+// aaa()
