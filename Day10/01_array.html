@@ -34,6 +34,7 @@
 
         // 파이썬의 리스트처럼 새로운 요소를 추가할 수 있음. [새로운 인덱스 번호 사이의 요소는 자동 생성]
         bbb[5]= 100;
+        document.write(bbb + '<br>')
         document.write('요소 개수: ' + bbb.length +'<br>'); //6개
         document.write(bbb[0]+'<br>');
         document.write(bbb[1]+'<br>');
@@ -82,7 +83,7 @@
         //배열이 존재함. 이를 [연관배열]이라고 부름
 
         //연관배열 : '키'로 인덱스를 대신하는 배열
-        var eee= new Array();
+        var eee= new Array(); // new: 생성
         eee['name']= 'sam';
         eee['age']= 20;
         eee['address']= 'seoul';

@@ -38,7 +38,7 @@
         bbb();//OK
 
         function ccc(){
-            document.write('ccc function.....<br>');
+            document.write('ccc function.....<br>'); // 위 script에서 등록되지 않은 상태에서는 서로 영향 안받음
         }
     </script>
 
@@ -75,7 +75,7 @@
         }
 
         eee(50, 30);
-        eee(50); // 50, undefined  -- 50+undefined = NaN (Not a Number)
+        //eee(50); // 50, undefined  -- 50+undefined = NaN (Not a Number)
 
         //같은 이름의 함수를 또 정의하면.. 덮어쓰기됨(즉, 마지막 정의한 함수내용으로 덮어써짐.)
         //위에서 먼저 호출해던 eee(50,30) 문도...영향 받음.
@@ -183,7 +183,7 @@
         // 지역변수에서...지역이라는 의미는 함수의 {} 영역을 의미함.
         // 그래서 다른 {}영역은 지역으로 인식하지 않음.
         if(true){
-            var tel='010-1234-5678'; //지역변수 아님!!!
+            var tel='010-1234-5678'; // if는 함수가 아니기 때문에 지역변수 아님!!!
             document.write('조건문 안 tel: '+ tel +"<br>");
         }
         document.write('조건문 밖 tel: '+ tel +"<br>");
