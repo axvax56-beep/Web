@@ -1,0 +1,100 @@
+/* 공통 스타일 import */
+@import url('./common.css');
+
+
+/* 글작성 영역 너비, 윗 경계선*/
+.board_write {
+    width: 100%;
+    border-top: 2px solid black;
+}
+
+/* 제목작성 영역, 글쓴이 비빌번호 입력 영역 여백 */
+.board_write .title, .info{
+    padding: 1.5rem;
+}
+
+/* 제목 줄 영역 [라벨,input] 옆으로 배치  */
+.board_write .title {
+    display: flex;
+    flex-direction: row;
+
+    border-bottom: 1px dashed #dddddd;
+}
+
+.board_write .col_label{
+    width: 10rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.board_write .col_input{
+    flex-grow: 1;
+}
+
+.board_write .col_input input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+
+/* 글쓴이 / 비번번호 입력 영역 */
+.board_write .info {
+    display: flex;
+    flex-direction: row;
+
+    /* 두 영역을 좌우로 밀어버리기 위해 배치 방향(가로)의 정렬 */
+    justify-content: space-between;
+
+    border-bottom: 1px solid black;
+}
+
+/* 글쓴이 입력 영역 40% 사이즈 차지 */
+.board_write .info .writer{
+    width: 50%;        
+    display: flex;
+}
+
+.board_write .info .password{
+    width: 30%;
+    display: flex;
+}
+
+
+/* 글 내용 작성 영역 */
+.board_write .content{
+    border-bottom: 1px solid black;
+}
+
+/* 글 내용 작성 textarea 요소 스타일 */
+.board_write .content textarea {
+    display: block; /*한줄 모두 차지*/
+    width: 100%;
+    height: 30rem;
+    padding: 1.5rem;
+    border: 0;   
+    /* 입력요소들의 박스사이즈를 경계선까지 포함  */
+    box-sizing: border-box; 
+
+    /* 요소의 크기조절은 허용 안함*/
+    resize: none;
+}
+
+
+/* 제출버튼(submit) 스타일 */
+.btn_wrap input{
+    display: inline-block;
+    min-width: 110px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    /* 제출버튼에 마우스를 올렸을때 커서모양을 손가락모양으로 변경 */
+    cursor: pointer;
+}
+

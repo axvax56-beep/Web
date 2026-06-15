@@ -1,0 +1,52 @@
+/* 공통스타일 import */
+@import url('./common.css');
+
+/* 상세글 보기 페이지만의 고유 스타일 작업 */
+.board_view{
+    width: 100%;
+    border-top: 2px solid black;
+}
+
+/* 게시글 제목 영역 */
+.board_view .title{
+    padding: 2rem 1.5rem;
+    font-size: 2rem;
+    border-bottom: 1px dashed #dddddd;
+}
+
+/* 게시글의 정보들 표시 영역 (번호, 글쓴이, 작성일, 조회수) */
+.board_view .info{
+    padding: 1.5rem 0rem;
+    border-bottom: 1px solid gray;
+}
+
+/* 정보들이 옆으로 배치되도록.. inline-block */
+.board_view .info dl{
+    display: inline-block;
+    padding: 0 2rem;
+    border-right: 1px solid #cccccc;
+}
+.board_view .info dl:last-child{
+    border-right: 0px;
+}
+
+/* 각 항목들이 옆으로 ..배치 */
+.board_view .info dl dt, .board_view .info dl dd {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.board_view .info dl dd{
+    color: #888888;
+    margin-left: 1rem;
+}
+
+/* 게시글 내용 영역 */
+.board_view .content{
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 160%; /* 줄 간격 */
+    border-bottom: 1px solid black;
+    min-height: 20rem;
+}
+

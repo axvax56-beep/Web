@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+
+    <script>
+        function aaa(){
+            //AJAX 기술을 수행하는 내장돤 객체 생성
+            var xhr= new XMLHttpRequest;
+
+            //서버로부터 데이터를 받으면 자동으로 발동하는 함수를 등록
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4 && xhr.status==200){ // 4: 작업완료, 200: 성공
+                    document.getElementById('kk').innerHTML = xhr.responseText
+                }
+            }    
+            // xhr.open('GET', './aaa.txt', true); // true, false: 비동기 방식 여부
+            xhr.open('GET', './no_ajax.html', true);
+            xhr.send(); //요청 보내기
+        }
+    </script>
+
+</head>
+<body>
+    
+    <p>
+        <button onclick="aaa()">GET 방식으로 데이터 요청</button>
+    </p>
+    <hr>
+    <div id="kk"></div>
+
+</body>
+</html>

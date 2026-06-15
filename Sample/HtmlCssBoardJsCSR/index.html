@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>게시판</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- 외부 스타일시트 연결 -->
+        <link rel="stylesheet" href="./css/index.css">
+
+        <!-- 외부 스크립트 연결 -->
+        <script src="./js/index.js"></script> 
+    </head>
+    <!-- 웹문서 body의 로딩이 완료되는 이벤트 처리 -->
+    <body onload="loaded()">
+        
+        <!-- 페이지가 표시되는 영역 -->
+        <div class="board_wrap">
+
+            <!-- 1. 게시판 제목 영역 -->
+            <div class="board_title">
+                <h2>자유 게시판</h2>
+                <p>자유롭게 게시글을 작성하며 이야기를 나누세요.</p>
+            </div>
+
+            <!-- 2. 게시판의 테이블이 그려질 영역(테이블, 페이지네이션) -->
+            <div class="board_list_wrap">
+                <!-- 2.1 테이블 영역 -->
+                <table class="board_list">
+                    <!-- 1) 컬룸 제목줄 -->
+                    <tr class="column_title">
+                        <th class="col_no">번호</th>
+                        <th class="col_title">제목</th>
+                        <th class="col_writer">글쓴이</th>
+                        <th class="col_date">작성일</th>
+                        <th class="col_hits">조회</th>
+                    </tr> 
+
+                    <!-- 2)게시글 데이터들(배열) (여러줄 - JS 반복문으로 그려내기) -->
+                    <!-- <tr>
+                        <td class="col_no">1</td>
+                        <td class="col_title"><a href="./board/view.html?no=1">글 제목 #1</a></td>
+                        <td class="col_writer">sam</td>
+                        <td class="col_date">2025.07.28</td>
+                        <td class="col_hits">10</td>
+                    </tr> -->
+                    
+
+                </table>
+
+                <!-- 2.2 페이지네이션 영역-->
+                <div class="board_pagination">
+                    <a href="" class="btn">&lt;&lt;</a>
+                    <a href="" class="btn">&lt;</a>
+                    <!-- [JS를 이용하여 페이지번호 개수가 결정됨] -->
+                    <a href="" class="btn selected">1</a> <!-- [클래스명을 여러개 부여 btn & selected] -->
+                    <a href="" class="btn">2</a>
+                    <a href="" class="btn">3</a>
+                    <a href="" class="btn">4</a>
+                    <a href="" class="btn">5</a>
+                    <a href="" class="btn">&gt;</a>
+                    <a href="" class="btn">&gt;&gt;</a>
+                </div> 
+            </div> 
+
+            <!-- 3. 버튼들이 놓여지는 영역 -->
+            <div class="board_btn">
+                <a href="./board/write.html">글쓰기</a>
+            </div>
+
+
+        </div> 
+
+    </body>
+</html>

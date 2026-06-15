@@ -1,0 +1,10 @@
+{
+    "status": 200,
+    "total": 4,
+    "data" : [
+        {"no":1,"title":"Hello web","msg":"nice to meet you #1","writer":"sam","date":"2025-07-29","hits":10,"password":"1111"},
+        {"no":2,"title":"Nice web","msg":"nice to meet you #2","writer":"robin","date":"2025-07-30","hits":13,"password":""},
+        {"no":3,"title":"Good web","msg":"nice to meet you #3","writer":"hong","date":"2025-07-30","hits":15,"password":""},
+        {"no":4,"title":"Bad web","msg":"nice to meet you #4","writer":"kim","date":"2025-07-31","hits":20,"password":"2222"}
+    ]
+}

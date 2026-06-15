@@ -1,0 +1,91 @@
+/* 공통 스타일 import */
+@import url('./common.css');
+
+/* 글 작성 영역 너비 및 경계선 */
+.board_write {
+    width: 100%;
+    border-top: 2px solid black;
+}
+
+/* 제목, 글쓴이, 비밀번호 입력 영역에 여백 */
+.board_write .title, .info{
+    padding: 1.5rem;
+}
+
+/* 제목 줄 영역 [ 라벨, input ] 옆으로 배치 */
+.board_write .title{
+    display: flex; /* 부모요소가 자식요소의 배치를 유연하게 할 수 있음 (추후 별도 학습)*/
+    flex-direction: row; /*자식요소를 수평으로 배치(기본방향)*/    
+    border-bottom: 1px dashed #dddddd;
+}
+
+/* 라벨 표시 영역 */
+.board_write .col_label{
+    width: 10rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+/* input 요소의 너비를 라벨을 제외한 나머지 영역 모두 차지하기 */
+.board_write .col_input{
+    flex-grow: 1;  /* 마치 안드로이드의 layout_weight 같은 flex 속성 */
+}
+.board_write .col_input input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+}
+
+/* 글쓴이 / 비밀번호 입력 영역 을 옆으로 배치  */
+.board_write .info {
+    display: flex;
+    flex-direction: row; /* 수평배치 */
+
+    /* 두 영역을 좌우로 밀어버리기 위해 사이 간격을 조정 */
+    justify-content: space-between;
+}
+
+/* 글쓴이 영역의 라벨과 입력박스를 옆으로 배치 */
+.board_write .info .writer{
+    width: 50%;
+    display: flex;
+}
+
+/* 비밀번호 영역의 라벨과 입력박스를 옆으로 배치 */
+.board_write .info .password{
+    width: 30%;
+    display: flex;
+}
+
+/* 글 내용을 입력하는 영역 */
+.board_write .content{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* 글 내용을 입력하는 textarea 요소의 크기 및 경계선, 크기조정모드 */
+.board_write .content textarea{
+    display: block; 
+    width: 100%;
+    height: 30rem;
+    padding: 1.5rem;
+    border: 0;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/* 제출(submit)버튼 스타일 */
+.board_btn input{
+    display: inline-block;
+    min-width: 110px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    /* 마우스를 올렸을때 커서모양이 손가락 모양으로.. */
+    cursor: pointer;
+}

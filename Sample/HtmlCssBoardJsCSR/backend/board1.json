@@ -1,0 +1,4 @@
+{
+    "status":200,
+    "data": {"no":1,"title":"Hello web","msg":"nice to meet you #1","writer":"sam","date":"2025-07-29","hits":10,"password":"1111"}
+}

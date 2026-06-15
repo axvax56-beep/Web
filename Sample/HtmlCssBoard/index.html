@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+    <!-- 콘테츠가 표시되는 영역 -->
+    <div class="board_wrap">
+
+        <!--1. 게시판 제목 영역 -->
+        <div class="board_title">
+            <h2>자유 게시판</h2>
+            <p>자유롭게 게시글을 작성하며 이야기를 나누세요.</p>
+        </div>
+
+        <!-- 2. 게시판 테이블이 그려질 메인 영역 (테이블, 페이지네이션, 버튼들) -->
+        <div class="board_list_wrap">
+            
+            <!-- 2.1 테이블 영역 -->
+            <table class="board_list">
+                <!--1) 컬룸 제목줄 -->
+                <tr class="column_title">
+                    <!-- 컬룸(칸)별 스타일 적용을 편하게 하기 위해 -->
+                    <th class="col_no">번호</th>
+                    <th class="col_title">제목</th>
+                    <th class="col_writer">글쓴이</th>
+                    <th class="col_date">작성일</th>
+                    <th class="col_count">조회</th>
+                </tr>
+
+                <!--2) 게시글 데이터들(배열) (여러줄 - JS 반복문으로 그려내기) ~ 우선 디자인만 확인하기 위해 가짜 데이터 2줄 정도..  -->
+                <tr>
+                    <td class="col_no">1</td>
+                    <td class="col_title"><a href="./board/view.html?no=1">글 제목 #1</a></td> <!-- 글 제목을 선택하면 상제 글 화면페이지로 이동(요청 파라미터에 게시글 번호 no 전달) -->
+                    <td class="col_writer">sam</td>
+                    <td class="col_date">2024.05.07</td>
+                    <td class="col_count">10</td>
+                </tr>
+                <tr>
+                    <td class="col_no">2</td>
+                    <td class="col_title"><a href="./board/view.html?no=2">글 제목 #2</a></td>
+                    <td class="col_writer">robin</td>
+                    <td class="col_date">2024.05.08</td>
+                    <td class="col_count">15</td>
+                </tr>
+                <tr>
+                    <td class="col_no">3</td>
+                    <td class="col_title"><a href="./board/view.html?no=3">글 제목 #3</a></td>
+                    <td class="col_writer">hong</td>
+                    <td class="col_date">2024.05.09</td>
+                    <td class="col_count">25</td>
+                </tr>
+            </table>
+
+            <!-- 2.2 페이지네이션 영역-->
+            <div class="board_pagination">
+                <a href="#" class="btn first">&lt;&lt;</a>  <!--  << 모양 [스타일링 - 클래스 여러개 지정 : btn  &  first]-->
+                <a href="#" class="btn prev">&lt;</a>  <!--  < 모양 [클래스 여러개 지정 : btn  &  prev]-->
+                <a href="#" class="btn selected">1</a>  <!-- [클래스 여러개 지정 : btn  &  selcted]-->
+                <a href="#" class="btn">2</a> <!-- btn 스타일만 적용 -->
+                <a href="#" class="btn">3</a> <!-- btn 스타일만 적용 -->
+                <a href="#" class="btn">4</a> <!-- btn 스타일만 적용 -->
+                <a href="#" class="btn">5</a> <!-- btn 스타일만 적용 -->
+                <a href="#" class="btn next">&gt;</a>  <!--  > 모양 [스타일링 - 클래스 여러개 지정 : btn  &  next]-->
+                <a href="#" class="btn last">&gt;&gt;</a>  <!--  > 모양 [클래스 여러개 지정 : btn  &  last]-->
+            </div>
+
+            <!-- 2.3 게시글 등록/수정 버튼 영역-->
+            <div class="btn_wrap">
+                <a href="./board/write.html">등록</a>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

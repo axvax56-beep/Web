@@ -1,0 +1,80 @@
+
+
+<!-- 글작성 페이지 write.html을 그대로 복사...하여 input요소들의 value값을 JS or PHP 데이터로 미리 설정.. & [등록]버튼을 [수정완료]버튼으로 변경 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+
+     <!-- 외부 스타일시트 연결 [경로 주의 ../ ]-->
+     <link rel="stylesheet" href="../css/write.css">
+</head>
+<body>
+
+    <!-- 콘테츠가 표시되는 영역 -->
+    <div class="board_wrap">
+
+        <!--1. 게시판 제목 영역 -->
+        <div class="board_title">
+            <h2>자유 게시판 - 게시글 수정</h2>
+            <p>자유롭게 게시글을 작성하며 이야기를 나누세요.</p>
+        </div>
+
+        <!-- 2. 게시글 작성의 컨테이너 영역 -->
+        <div class="board_write_wrap">
+
+            <!-- 서버에 작성내용을 보내야 하기에 form요소 배치 -->
+            <form action="../backend/board/updateBoard.php" method="post">
+                <!-- 2.1 게시글 작성 영역 -->
+                <div class="board_write">
+                    <!-- 2.1.1 제목 작성 영역 -->
+                    <div class="title">
+                        <div class="col_label">제목</div>                        
+                        <div class="col_input"><input type="text" placeholder="제목입력" value="글 제목#1"></div>
+                    </div>
+
+                    <!-- 2.1.2 글쓴이 / 비빌번호 입력 영역 -->
+                    <div class="info">
+
+                        <div class="writer">
+                            <div class="col_label">글쓴이</div>                        
+                            <div class="col_input"><input type="text" placeholder="글씬이 입력" value="sam"></div>
+                        </div>
+
+                        <div class="password">
+                            <div class="col_label">비밀번호</div>                        
+                            <div class="col_input"><input type="password" placeholder="비밀번호 입력" value="1111"></div>
+                        </div>             
+                        
+                    </div>
+
+
+                    <!-- 2.1.3 내용 입력 영역 -->
+                    <div class="content">
+
+                        <!-- [JS or PHP 데이터 표시] -->
+                        <textarea name="msg" placeholder="내용 입력"> 써 있던 글 내용</textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2.2 등록/취소 버튼 영역 -->
+                <div class="btn_wrap">
+                    <input type="submit" value="수정완료">
+                    <!-- 취소버튼은 클릭하면 이전 페이지로 이동(상세글 보기 영역) -->
+                    <input type="button" value="취소" onclick="history.back()">
+                </div>
+
+            </form>                        
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

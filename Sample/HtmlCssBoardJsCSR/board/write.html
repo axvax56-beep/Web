@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>게시판</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- 외부 스타일시트 연결 [경로 주의]-->
+        <link rel="stylesheet" href="../css/write.css">
+
+        <!-- 외부 스크립트 -->
+        <script src="../js/write.js"></script> 
+
+    </head>
+    <body>
+        
+        <!-- 페이지가 표시되는 영역 -->
+        <div class="board_wrap">
+
+            <!-- 1. 게시판 제목 영역 -->
+            <div class="board_title">
+                <h2>자유 게시판 - 게시글 작성</h2>
+                <p>자유롭게 게시글을 작성하며 이야기를 나누세요.</p>
+            </div>
+
+            <!-- 사용자가 작성한 내용을 서버에 보내야 하기에 form 요소 배치 ( ajax 기술을 사용하더라도 form 사용을 권장[단, 실제 form요소의 동작은 막아버림]) -->
+            <!-- form 요소의 제출 이벤트에 반응하기 onsubmit -->
+            <form action="" method="post" onsubmit="submitBoard()" name="boardForm">
+
+                <!-- 2. 게시글을 작성하는 요소들이 있는 영역 -->
+                <div class="board_write">                    
+                    <!-- 2.1 제목 입력 영역 -->
+                    <div class="title">
+                        <div class="col_label">제목</div>
+                        <div class="col_input"><input type="text" placeholder="제목입력" name="title"></div>
+                    </div>
+                        
+                    <!-- 2.2 글쓴이 / 비밀번호 입력 영역 -->
+                    <div class="info">
+                        <div class="writer">
+                            <div class="col_label">글쓴이</div>
+                            <div class="col_input"><input type="text" placeholder="글쓴이 입력" name="writer"></div>
+                        </div>
+                        <div class="password">
+                            <div class="col_label">비밀번호</div>
+                            <div class="col_input"><input type="password" placeholder="비밀번호 입력" name="password"></div>
+                        </div>
+                    </div>
+
+                    <!-- 2.3 글 내용 입력 영역 -->  
+                    <div class="content">
+                        <textarea placeholder="내용 입력" name="msg"></textarea>
+                    </div>    
+                </div>             
+
+                <!-- 3. 버튼들이 놓여지는 영역 -->
+                <div class="board_btn">
+                    <input type="submit" value="등록">
+                    <a href="../index.html">취소</a>
+                </div>
+
+            </form>            
+
+        </div> 
+    </body>
+</html>
