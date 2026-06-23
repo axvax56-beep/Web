@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h2 id="h1"></h2>
+    <img src="" alt="" width="300" id="img1">
+
+    <script>
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZTU3ZDFiMDNmYTRkYzFkYzBiZDRkZjZlZTk5NTYxZSIsIm5iZiI6MTc4MjA5MDY1MS42ODQsInN1YiI6IjZhMzg4YjliYzFiMDFkODc5MTgzZmM0YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nopCej45MRTuxyAd3WWBNByq9GszC0whQ7vbxnrkNTE'
+            }
+            };
+
+            fetch('https://api.themoviedb.org/3/movie/popular?language=ko-KR&page=1', options)
+            .then(res => res.text())
+            .then(res => {
+                console.log(res)
+                var json = JSON.parse(res)
+                // alert(json.results[0].title )
+                // alert("https://image.tmdb.org/t/p/w500" + json.results[0].poster_path)
+                document.getElementById("h1").innerHTML = json.results[0].title
+                document.getElementById("img1").src = "https://image.tmdb.org/t/p/w500" + json.results[0].poster_path
+            })
+            .catch(err => console.error(err));
+    </script>
+</body>
+
+</html>
